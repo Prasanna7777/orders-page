@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/orders-page/static/css/main.90d640d2.css",
+    "main.js": "/orders-page/static/js/main.236859b9.js",
+    "static/js/787.5eb3cefb.chunk.js": "/orders-page/static/js/787.5eb3cefb.chunk.js",
+    "static/media/Logo.png": "/orders-page/static/media/Logo.0efc5833cf29ec6218fe.png",
+    "index.html": "/orders-page/index.html",
+    "main.90d640d2.css.map": "/orders-page/static/css/main.90d640d2.css.map",
+    "main.236859b9.js.map": "/orders-page/static/js/main.236859b9.js.map",
+    "787.5eb3cefb.chunk.js.map": "/orders-page/static/js/787.5eb3cefb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.90d640d2.css",
+    "static/js/main.236859b9.js"
+  ]
+}
