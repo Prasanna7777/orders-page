@@ -1,23 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+import Header from './components/Header';
+import Header1 from './components/Header1';
+import OrderDetails from './components/orderDetails';
+import Orders from './components/orders';
+import MediaContext from './context/MediaContext';
 
 function App() {
+  const [isMobile, setIsMobile] = useState(window.innerWidth<=850)
+
+  const handleResize = () => {
+    setIsMobile(window.innerWidth<=850);
+  }
+
+  window.addEventListener("resize",handleResize);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <MediaContext.Provider value={{isMobile}}>
+        <Header />
+        <Header1/>
+        <OrderDetails />
+        <Orders />
+      </MediaContext.Provider>
     </div>
   );
 }
