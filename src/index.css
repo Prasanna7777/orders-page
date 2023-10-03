@@ -8,6 +8,7 @@
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #F7F7F7;
+  min-width: 340px;
 }
 
 .header {
@@ -35,6 +36,9 @@ body {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  @media (max-width: 850px) {
+    display: none;
+  }
 }
 
 .menu-button{
@@ -49,15 +53,6 @@ body {
   cursor: pointer;
 }
 
-.mobile-client-header{
-  display: flex;
-  flex-direction: column;
-  background-color: white;
-  box-shadow: rgba(0, 0, 0, 0.04) 0px -1px 2px, rgba(0, 0, 0, 0.04) 0px 1px 2px, rgba(0, 0, 0, 0.04) 0px 3px 4px;
-  padding: 10px;
-  height: 120px;
-  position: relative;
-}
 .client-header{
   background-color: white; 
   display: flex;
@@ -69,13 +64,36 @@ body {
   box-shadow: rgba(0, 0, 0, 0.04) 0px -1px 2px, rgba(0, 0, 0, 0.04) 0px 1px 2px, rgba(0, 0, 0, 0.04) 0px 3px 4px;
   @media (max-width: 850px) {
     box-shadow: none;
-    padding: 0px 20px;
+    padding: 20px 20px;
+    flex-wrap: wrap;
+    height: 150px;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px -1px 2px, rgba(0, 0, 0, 0.04) 0px 1px 2px, rgba(0, 0, 0, 0.04) 0px 3px 4px;
+  }
+}
+
+.logo{
+  order: 1;
+  @media (max-width: 850px) {
+    order: 2;
+    padding-left: 75px;
   }
 }
 
 .button-container{
   display: flex;
   align-items: center;
+  order: 2;
+  @media (max-width: 850px) {
+    display:none
+  }
+}
+
+.menu-icon{
+  font-size: 35px;
+  order: 1;
+  @media (min-width: 851px) {
+    display: none;
+  }
 }
 
 .client-menu-button{
@@ -93,6 +111,12 @@ body {
   margin-right: 15px;
 }
 
+.client-name{
+  @media (max-width: 850px) {
+    display:none;
+  }
+}
+
 .search-bar{
   display: flex;
   background-color: #F7F7F7;
@@ -103,12 +127,11 @@ body {
   width: 550px;
   position: relative;
   padding: 0px 20px;
-  
+  order: 3;
   @media (max-width: 850px) {
-    margin: 12px;
-    margin-left:15px;
-    height:80px;
-    width: inherit;
+    height:70px;
+    width: 100%;
+    order: 4;
   }
 
 }
@@ -129,6 +152,37 @@ body {
   align-items: center;
   justify-content: space-around;
   cursor: pointer;
+  @media (max-width: 850px) {
+    display: flex;
+  }
+}
+
+.cart-user-mobile{
+  display: none;
+  @media (max-width: 850px) {
+    display: flex;
+    justify-content: flex-end;
+    order: 3;
+  }
+}
+
+.cart-user{
+  display: flex;
+  order: 4;
+  width: 250px;
+  margin-left: 20px;
+  justify-content: space-between;
+  @media (max-width: 850px) {
+    display: none
+  }
+}
+
+.cart{
+  margin-top: 10px;
+  margin-left: 15px;
+  @media (max-width: 850px) {
+    margin-left: -30px;
+  }
 }
 
 .order-details{
@@ -142,6 +196,20 @@ body {
   align-items: flex-start;
   @media (max-width: 850px) {
     padding: 20px;
+    width: 91;
+  }
+}
+
+.order-number{
+  @media (max-width: 850px) {
+    display: none;
+  }
+}
+
+.mobile-rate-payment{
+  width: 100%;
+  @media (min-width: 850px) {
+    display: none;
   }
 }
 
@@ -181,6 +249,15 @@ body {
   justify-content: space-between;
   width: 100%;
   flex-wrap: wrap;
+  @media (max-width: 850px) {
+    display: none;
+  }
+}
+
+.mobile-orders{
+  @media (min-width: 850px) {
+    display: none;
+  }
 }
 
 .order-container{
@@ -199,6 +276,15 @@ body {
   margin-top:20px;
   margin-left: 15px;
   border-left: 1px solid black;
+  @media (max-width: 850px) {
+    display: none;
+  }
+}
+
+.mobile-order-description{
+  @media (min-width: 851px) {
+    display: none;
+  }
 }
 
 .order-heading{
@@ -224,12 +310,15 @@ body {
   @media (max-width: 850px) {
     margin-bottom: 40px;
   }
-
 }
+
+
+
 .order-description{
   display: flex;
   align-items: center;
  }
+
 .rate-button{
   color: white;
   position: relative;
@@ -244,7 +333,6 @@ body {
   border-radius: 8px;
   @media (max-width: 850px) {
     margin: 20px 0px;
-    width: 100%
   }
 }
 
@@ -257,6 +345,9 @@ body {
   margin-right: 10px;
   background-color: white;
   width: 370px;
+  @media (max-width: 850px) {
+    display: none;
+  }
 }
 
 .payment{
@@ -311,6 +402,13 @@ body {
   @media (max-width: 850px) {
     margin: 20px;
     width:inherit
+  }
+}
+
+.delivary-status{
+  display: flex;
+  @media (min-width: 850px) {
+    display: none;
   }
 }
 

@@ -1,10 +1,7 @@
 import { FaCircle } from "react-icons/fa";
 import { FaChevronDown } from "react-icons/fa";
-import { useContext } from "react";
-import MediaContext from '../context/MediaContext';
 
 const Header = () => {
-    const {isMobile} = useContext(MediaContext);
 
   return (
     <div className = "header">
@@ -19,16 +16,14 @@ const Header = () => {
                &nbsp; <FaChevronDown style={{fontSize: "12px", color: 'white', marginTop: "4px"}}/>
             </div>
         </div>
-        {!isMobile ? (
-            <div className = 'menu-options'>
-                <button className="menu-button">Registry</button>
-                <button className="menu-button">Weekly Ad</button>
-                <button className="menu-button">RedCard</button>
-                <button className="menu-button">Target Circle</button>
-                <button className="menu-button">Gift Cards</button>
-                <button className="menu-button">Find Stores</button>
-            </div>
-        ):''}
+        <div className = 'menu-options'>
+            <button className="menu-button">Registry</button>
+            <button className="menu-button">Weekly Ad</button>
+            <button className="menu-button">RedCard</button>
+            <button className="menu-button">Target Circle</button>
+            <button className="menu-button">Gift Cards</button>
+            <button className="menu-button">Find Stores</button>
+        </div>
     </div>
   )
 }
